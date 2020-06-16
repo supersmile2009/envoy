@@ -56,6 +56,7 @@ ActiveQuicListener::ActiveQuicListener(Event::Dispatcher& dispatcher,
     if (!ok) {
       ENVOY_LOG(warn, "Failed to apply socket options to socket {} on listener {} after binding",
                 listen_socket_.ioHandle().fd(), listener_config.name());
+      ASSERT(false); // fixfix
       throw EnvoyException("Failed to apply socket options.");
     }
     listen_socket_.addOptions(options);

@@ -1,5 +1,7 @@
 #include "envoy/config/core/v3/base.pb.h"
 
+#include "envoy/network/exception.h"
+
 #include "common/network/address_impl.h"
 #include "common/network/listener_impl.h"
 #include "common/network/utility.h"
